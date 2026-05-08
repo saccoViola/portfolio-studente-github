@@ -1,0 +1,81 @@
+Come prima cosa mi sono assicurata in quale cartella mi trovassi. 
+Ero sul disco O: quindi mi sono spostata sul disco C: e sono entrata nella cartella documents: 
+$ pwd
+$ cd C:
+$ cd Users 
+$ cd ml-fullstack
+$ cd Documents 
+
+Ho poi creato la cartella portfolio-studente e ci sono entrata 
+$ mkdir portfolio-studente 
+$ cd portfolio-studente 
+
+Ho creato la repository con git init
+$ git init 
+
+Dopo aver creato il file html l'ho aggiunto alla repository 
+$ git add index.html
+
+
+Ho controllato lo status della cartella
+$ git status
+
+e questo è stato l'output:
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+Ho creato e aggiunto il file style.css da Visual Studio Code
+$ git add style.css
+
+Ho creato il README con nano
+$ nano README.md
+
+L'ho aggiunto alla repository 
+$ git add README.md
+
+Ho configurato nome e e-mail in git con git config --local dato che quando ho provato il primo commit mi aveva dato questo avviso: 
+$ git commit -m "inizializzazione cartella e file html, css e README"
+fatal: name consists only of disallowed characters:
+
+In seguito ho potuto fare il primo commit 
+
+$ git commit -m "inizializzazione cartella e creazione files"
+[master (root-commit) 63ac837] inizializzazione cartella e creazione files
+ 3 files changed, 47 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 index.html
+ create mode 100644 style.css
+ 
+
+Ho modificato il file html, l'ho aggiunto alla repository e ho fatto un secondo commit 
+
+$ git add index.html 
+$ git commit -m "aggiunte competenze"
+
+e infine ho verificato lo stato dei commit con git log
+
+commit feca4b614043ad76a362f8ef9eab3c49128bd6e9 (HEAD -> master)
+Author: Denise <denise.rizzi@edu-mobilitacademy.it>
+Date:   Fri May 8 12:21:10 2026 +0200
+
+    aggiunte competenze
+
+commit 63ac83778ca4975b1f31c3a003fd0352ff99dfea
+Author: Denise <denise.rizzi@edu-mobilitacademy.it>
+Date:   Fri May 8 12:19:53 2026 +0200
+
+    inizializzazione cartella e creazione files
